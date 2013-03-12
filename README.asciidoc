@@ -17,6 +17,7 @@ other block elements.
 
 The AsciiDoc block structure can be informally summarized as follows:
 
+--------------------------------------
 Document      ::= (Header?,Preamble?,Section*)
 Header        ::= (Title,(AuthorInfo,RevisionInfo?)?)
 AuthorInfo    ::= (FirstName,(MiddleName?,LastName)?,EmailAddress?)
@@ -33,6 +34,7 @@ LabeledList   ::= (ListEntry)+
 ListEntry     ::= (ListLabel,ListItem)
 ListLabel     ::= (ListTerm+)
 ListItem      ::= (ItemText,(List|ListParagraph|ListContinuation)*)
+--------------------------------------
 
 Where:
 
