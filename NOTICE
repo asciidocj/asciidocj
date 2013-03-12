@@ -1,4 +1,4 @@
-asciidocj
+AsciiDocJ: A pure Java library for AsciiDoc processing.
 Copyright (c) 2013 Ricardo Arguello
 
 Based on pegdown, a pure Java library for clean and lightweight Markdown
