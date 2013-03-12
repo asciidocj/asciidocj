@@ -1,0 +1,45 @@
+= AsciiDocJ
+
+== Introduction
+AsciiDocJ is a pure Java library for AsciiDoc processing.
+
+== Document Structure
+An AsciiDoc document consists of a series of block elements starting 
+with an optional document Header, followed by an optional Preamble, 
+followed by zero or more document Sections.
+
+Almost any combination of zero or more elements constitutes a valid 
+AsciiDoc document: documents can range from a single sentence to a 
+multi-part book.
+
+Block elements consist of one or more lines of text and may contain 
+other block elements.
+
+The AsciiDoc block structure can be informally summarized as follows:
+
+Document      ::= (Header?,Preamble?,Section*)
+Header        ::= (Title,(AuthorInfo,RevisionInfo?)?)
+AuthorInfo    ::= (FirstName,(MiddleName?,LastName)?,EmailAddress?)
+RevisionInfo  ::= (RevisionNumber?,RevisionDate,RevisionRemark?)
+Preamble      ::= (SectionBody)
+Section       ::= (Title,SectionBody?,(Section)*)
+SectionBody   ::= ((BlockTitle?,Block)|BlockMacro)+
+Block         ::= (Paragraph|DelimitedBlock|List|Table)
+List          ::= (BulletedList|NumberedList|LabeledList|CalloutList)
+BulletedList  ::= (ListItem)+
+NumberedList  ::= (ListItem)+
+CalloutList   ::= (ListItem)+
+LabeledList   ::= (ListEntry)+
+ListEntry     ::= (ListLabel,ListItem)
+ListLabel     ::= (ListTerm+)
+ListItem      ::= (ItemText,(List|ListParagraph|ListContinuation)*)
+
+Where:
+
+- ? implies zero or one occurrence, + implies one or more occurrences, * implies zero or more occurrences.
+- All block elements are separated by line boundaries.
+- BlockId, AttributeEntry and AttributeList block elements (not shown) can occur almost anywhere.
+- There are a number of document type and backend specific restrictions imposed on the block syntax.
+- The following elements cannot contain blank lines: Header, Title, Paragraph, ItemText.
+- A ListParagraph is a Paragraph with its listelement option set.
+- A ListContinuation is a list continuation element.

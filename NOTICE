@@ -1,0 +1,6 @@
+asciidocj
+Copyright (c) 2013 Ricardo Arguello
+
+Based on pegdown, a pure Java library for clean and lightweight Markdown
+processing based on a parboiled PEG parser.
+Copyright (c) 2010-2011 Mathias Doenitz (https://github.com/sirthias/pegdown)
