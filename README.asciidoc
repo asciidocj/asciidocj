@@ -1,6 +1,6 @@
 = AsciiDocJ
 
-image:https://api.travis-ci.org/asciidocj/asciidocj.png?branch=master["Build Status",link="https://travis-ci.org/asciidocj/asciidocj/"]
+image:https://travis-ci.org/asciidocj/asciidocj.png?branch=master["Build Status", link="https://travis-ci.org/asciidocj/asciidocj/"]
 
 == Introduction
 AsciiDocJ is a pure Java library for AsciiDoc processing.
